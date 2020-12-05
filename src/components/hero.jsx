@@ -7,6 +7,10 @@ import { connect } from 'react-redux'
 import PropTypes from "prop-types";
 import { registerUser } from '../actions/authActions'
 import footimage from '../assets/img/brand/white.svg'
+import axios from 'axios'
+import qs from 'querystring'
+
+
 
 class Hero extends Component {
     constructor(props) {
@@ -64,17 +68,25 @@ class Hero extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const userData = {
-            regNo: this.state.regNo,
-            email: this.state.email,
-            mobileNo: this.state.mobileNo,
-            blockName: this.state.blockName,
-            roomNo: this.state.roomNo,            
-            name: this.state.name,
-            vision:this.state.vision
+            "entry.223933096": this.state.regNo,
+            "entry.300677225": this.state.email,
+            "entry.73499461": this.state.mobileNo,
+            "entry.80618237": this.state.blockName,
+            "entry.877919449": this.state.name,
             
         }
+        const config = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        }
         this.buttonState();
-        this.props.registerUser(userData, this.props.history);
+        axios.post('https://docs.google.com/forms/d/e/1FAIpQLSdBnhSGl6dPtuUs0BlZRTBwLhXZ4P8WxmPHHGhn8xhYJE_Fwg/formResponse', qs.stringify(userData), config)
+            .then(() => {
+                this.props.history.push('/finish')
+            }).catch(() => {
+                this.props.history.push('/finish')
+            })
     }
     render() {
         const { errors, loading } = this.state;

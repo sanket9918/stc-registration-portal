@@ -1,4 +1,4 @@
-## Recruitment Portal by  Student Technical Community , VIT Vellore
+## CCS Registration Portal by  Student Technical Community , VIT Vellore
 
 The website is made to serve as a tool to conduct the recruitment exam for organisations within the institution to help them get started faster with the process and make it convenient.
 
