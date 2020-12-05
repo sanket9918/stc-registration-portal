@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stc-registration-portal/static/css/main.3930d026.chunk.css",
-    "main.js": "/stc-registration-portal/static/js/main.f977d712.chunk.js",
-    "main.js.map": "/stc-registration-portal/static/js/main.f977d712.chunk.js.map",
+    "main.js": "/stc-registration-portal/static/js/main.82ae8336.chunk.js",
+    "main.js.map": "/stc-registration-portal/static/js/main.82ae8336.chunk.js.map",
     "runtime-main.js": "/stc-registration-portal/static/js/runtime-main.a56e6235.js",
     "runtime-main.js.map": "/stc-registration-portal/static/js/runtime-main.a56e6235.js.map",
     "static/js/2.49292c41.chunk.js": "/stc-registration-portal/static/js/2.49292c41.chunk.js",
     "static/js/2.49292c41.chunk.js.map": "/stc-registration-portal/static/js/2.49292c41.chunk.js.map",
     "index.html": "/stc-registration-portal/index.html",
-    "precache-manifest.8edfd5b96d1bd3cac03501762ebdd639.js": "/stc-registration-portal/precache-manifest.8edfd5b96d1bd3cac03501762ebdd639.js",
+    "precache-manifest.d7442463e5be9a835be7458ea089c236.js": "/stc-registration-portal/precache-manifest.d7442463e5be9a835be7458ea089c236.js",
     "service-worker.js": "/stc-registration-portal/service-worker.js",
     "static/css/main.3930d026.chunk.css.map": "/stc-registration-portal/static/css/main.3930d026.chunk.css.map",
     "static/js/2.49292c41.chunk.js.LICENSE.txt": "/stc-registration-portal/static/js/2.49292c41.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.a56e6235.js",
     "static/js/2.49292c41.chunk.js",
     "static/css/main.3930d026.chunk.css",
-    "static/js/main.f977d712.chunk.js"
+    "static/js/main.82ae8336.chunk.js"
   ]
 }
