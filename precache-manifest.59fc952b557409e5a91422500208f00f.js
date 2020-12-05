@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a45874a3dec4fac3cac2c317d941a26",
+    "revision": "1a50435e99232a3ddf582056d051fe46",
     "url": "/stc-registration-portal/index.html"
   },
   {
-    "revision": "29bbc19ba2b9c2a40a4e",
+    "revision": "fbd7de347d2247212190",
     "url": "/stc-registration-portal/static/css/main.3930d026.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/stc-registration-portal/static/js/2.49292c41.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "29bbc19ba2b9c2a40a4e",
-    "url": "/stc-registration-portal/static/js/main.82ae8336.chunk.js"
+    "revision": "fbd7de347d2247212190",
+    "url": "/stc-registration-portal/static/js/main.b03a194d.chunk.js"
   },
   {
     "revision": "44f1de48ffac861e67d1",
