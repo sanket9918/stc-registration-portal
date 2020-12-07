@@ -110,7 +110,7 @@ class Hero extends Component {
                                         src={footimage}
 
                                     />
-                                    <h1 className="display-4  text-white" style={{ fontWeight: "300" }}>Just fill in the details and we will get back you ASAP!</h1>
+                                    <h1 className="display-4  text-white" style={{ fontWeight: "300" }}>Just fill in the details and we will get back to you ASAP!</h1>
                                     <span>Thank you for taking interest to be a part of our journey.We hope you make it to the top and we look forward to work with you</span>
                                 </div>
                             </Col>
@@ -244,7 +244,7 @@ class Hero extends Component {
                                             </InputGroupAddon>
                                             <Input
                                                 placeholder="Mobile No."
-                                                type="text"
+                                                type="number"
                                                 name="phone"
                                                 id='mobileNo'
                                                 onChange={this.onChange}
