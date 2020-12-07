@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/stc-registration-portal/static/css/main.3930d026.chunk.css",
-    "main.js": "/stc-registration-portal/static/js/main.6e9436aa.chunk.js",
-    "main.js.map": "/stc-registration-portal/static/js/main.6e9436aa.chunk.js.map",
-    "runtime-main.js": "/stc-registration-portal/static/js/runtime-main.a56e6235.js",
-    "runtime-main.js.map": "/stc-registration-portal/static/js/runtime-main.a56e6235.js.map",
-    "static/js/2.49292c41.chunk.js": "/stc-registration-portal/static/js/2.49292c41.chunk.js",
-    "static/js/2.49292c41.chunk.js.map": "/stc-registration-portal/static/js/2.49292c41.chunk.js.map",
-    "index.html": "/stc-registration-portal/index.html",
-    "precache-manifest.d17d04da7b69299b079604a4d3b9dc53.js": "/stc-registration-portal/precache-manifest.d17d04da7b69299b079604a4d3b9dc53.js",
-    "service-worker.js": "/stc-registration-portal/service-worker.js",
-    "static/css/main.3930d026.chunk.css.map": "/stc-registration-portal/static/css/main.3930d026.chunk.css.map",
-    "static/js/2.49292c41.chunk.js.LICENSE.txt": "/stc-registration-portal/static/js/2.49292c41.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.min.css": "/stc-registration-portal/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/global_error.svg": "/stc-registration-portal/static/media/global_error.7a5d2dab.svg",
-    "static/media/happy.svg": "/stc-registration-portal/static/media/happy.188f11ca.svg",
-    "static/media/nucleo.css": "/stc-registration-portal/static/media/nucleo-icons.f82ec6ba.ttf",
-    "static/media/white.svg": "/stc-registration-portal/static/media/white.5a203623.svg"
+    "main.css": "/static/css/main.4fd76544.chunk.css",
+    "main.js": "/static/js/main.368b1385.chunk.js",
+    "main.js.map": "/static/js/main.368b1385.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d4b2682b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d4b2682b.js.map",
+    "static/js/2.49292c41.chunk.js": "/static/js/2.49292c41.chunk.js",
+    "static/js/2.49292c41.chunk.js.map": "/static/js/2.49292c41.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8b480a41c9d85662c9685a997b681c70.js": "/precache-manifest.8b480a41c9d85662c9685a997b681c70.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4fd76544.chunk.css.map": "/static/css/main.4fd76544.chunk.css.map",
+    "static/js/2.49292c41.chunk.js.LICENSE.txt": "/static/js/2.49292c41.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/global_error.svg": "/static/media/global_error.7a5d2dab.svg",
+    "static/media/happy.svg": "/static/media/happy.188f11ca.svg",
+    "static/media/nucleo.css": "/static/media/nucleo-icons.f82ec6ba.ttf",
+    "static/media/white.svg": "/static/media/white.5a203623.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a56e6235.js",
+    "static/js/runtime-main.d4b2682b.js",
     "static/js/2.49292c41.chunk.js",
-    "static/css/main.3930d026.chunk.css",
-    "static/js/main.6e9436aa.chunk.js"
+    "static/css/main.4fd76544.chunk.css",
+    "static/js/main.368b1385.chunk.js"
   ]
 }
