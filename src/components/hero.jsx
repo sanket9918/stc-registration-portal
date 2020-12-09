@@ -2,15 +2,13 @@ import React, { Component } from 'react'
 import Navbar1 from './navbar.component'
 import Footer from './footer.component'
 import classnames from 'classnames'
-import { Col, Row, Container, Button, FormGroup, InputGroup, Input, InputGroupAddon, InputGroupText } from 'reactstrap'
+import { Col, Row, Container, Button, FormGroup, InputGroup, Input, InputGroupAddon, InputGroupText, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import { connect } from 'react-redux'
 import PropTypes from "prop-types";
 import { registerUser } from '../actions/authActions'
 import footimage from '../assets/img/brand/white.svg'
 import axios from 'axios'
 import qs from 'querystring'
-
-
 
 class Hero extends Component {
     constructor(props) {
@@ -26,7 +24,14 @@ class Hero extends Component {
             email: '',
             errors: {},
             vision:'',
-            loading: false
+            loading: false,
+            domain: '',
+            tech_domain: '',
+            dropDownDateOpen: false,
+            dropDownTimeOpen: false,
+
+            dateValue: 'Date',
+            timeValue: 'Time'
 
         }
     }
@@ -42,6 +47,17 @@ class Hero extends Component {
             })
         }
     }
+    onChangeCheck = e => {
+        if (e.target.checked) {
+            this.setState({
+                [e.target.id]: true
+            })
+        } else {
+            this.setState({
+                [e.target.id]: false
+            })
+        }
+    }
 
     onChange = e => {
         this.setState({
@@ -54,7 +70,27 @@ class Hero extends Component {
             [e.target.id]: e.target.value
         })
     }
- 
+    toggleDate = e => {
+        this.setState({
+            dropDownDateOpen: !this.state.dropDownDateOpen
+        })
+    }
+    toggleTime = e => {
+        this.setState({
+            dropDownTimeOpen: !this.state.dropDownTimeOpen
+        })
+    }
+    
+    selectDateValue = e => {
+        this.setState({
+            dateValue: e.target.id
+        })
+    }
+    selectTimeValue = e => {
+        this.setState({
+            timeValue: e.target.id
+        })
+    }
     buttonState() {
         this.setState({
             loading: true
@@ -67,14 +103,18 @@ class Hero extends Component {
     }
     onSubmit = (e) => {
         e.preventDefault();
-        const userData = {
+        let userData = {
             "entry.223933096": this.state.regNo,
             "entry.300677225": this.state.email,
             "entry.73499461": this.state.mobileNo,
-            "entry.80618237": this.state.blockName,
             "entry.877919449": this.state.name,
+            "entry.740442512": this.state.domain,
+            "entry.254028970": this.state.tech_domain,
+            "entry.331608497": this.state.dateValue,
+            "entry.643192952": this.state.timeValue
             
         }
+
         const config = {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -111,7 +151,7 @@ class Hero extends Component {
 
                                     />
                                     <h1 className="display-4  text-white" style={{ fontWeight: "300" }}>Just fill in the details and we will get back to you ASAP!</h1>
-                                    <span>Thank you for taking interest to be a part of our journey.We hope you make it to the top and we look forward to work with you</span>
+                                    <span>Thank you for taking interest to be a part of our journey.We hope you make it to the top and we look forward to work with you.</span>
                                 </div>
                             </Col>
                             <Col className="mb-lg-auto" lg="6">
@@ -265,6 +305,8 @@ class Hero extends Component {
                                             }>
                                             {errors.mobileNo}
                                         </span> </div>
+                                    
+                                    <span className='text-white'>Please mention your preferred domain.(You can select more than one)</span><br /><br />
 
                                     <FormGroup
 
@@ -272,23 +314,73 @@ class Hero extends Component {
                                         <InputGroup className="input-group-alternative">
                                             <InputGroupAddon addonType="prepend">
                                                 <InputGroupText>
-                                                    <i className="fa fa-home" />
+                                                    <i className="fa fa-info" />
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                             <Input
-                                                placeholder="Block name / Room no.(NA if staying outside)"
+                                                placeholder="(Design/Technical/Management)"
                                                 type="text"
-                                                name="block"
-                                                id='blockName'
+                                                name="domain"
+                                                id='domain'
                                                 onChange={this.onChange}
-                                                value={this.state.blockName}
-                                                error={errors.blockName}
+                                                value={this.state.domain}
+                                                error={errors.domain}
 
                                             />
                                         </InputGroup>
-                                    </FormGroup>  
-                                    
-                                   
+                                    </FormGroup>
+                                    <span className='text-white'>If you are applying for Technical domain, what's your preferred tech domain? (If you haven't decided then mention 'NA')</span><br /><br />
+                                    <FormGroup
+
+                                    >
+                                        <InputGroup className="input-group-alternative">
+                                            <InputGroupAddon addonType="prepend">
+                                                <InputGroupText>
+                                                    <i className="fa fa-info" />
+                                                </InputGroupText>
+                                            </InputGroupAddon>
+                                            <Input
+                                                placeholder="Ex. Web development/Android/Machine Learning/IoT"
+                                                type="text"
+                                                name="tech_domain"
+                                                id='tech_domain'
+                                                onChange={this.onChange}
+                                                value={this.state.tech_domain}
+                                                error={errors.domain}
+
+                                            />
+                                        </InputGroup>
+                                    </FormGroup>
+                                    <span className='text-white'>Select Date and Time slot for first round selection.(There may be changes in the actual schedule which may be duly communicated beforehand.)</span><br /><br />
+
+                                    <Dropdown isOpen={this.state.dropDownDateOpen} toggle={this.toggleDate}>
+                                        <DropdownToggle caret>
+                                            {this.state.dateValue}
+                                        </DropdownToggle>
+                                        <DropdownMenu>
+
+                                            <DropdownItem><div onClick={this.selectDateValue} id="12 Dec">12 Dec</div></DropdownItem>
+                                            <DropdownItem><div onClick={this.selectDateValue} id="13 Dec">13 Dec</div></DropdownItem>
+                                            <DropdownItem><div onClick={this.selectDateValue} id="14 Dec">14 Dec</div></DropdownItem>
+                                            <DropdownItem><div onClick={this.selectDateValue} id="15 Dec">15 Dec</div></DropdownItem>
+                                            <DropdownItem><div onClick={this.selectDateValue} id="16 Dec">16 Dec</div></DropdownItem>
+
+                                        </DropdownMenu>
+                                    </Dropdown><br /><br />
+
+                                    <Dropdown isOpen={this.state.dropDownTimeOpen} toggle={this.toggleTime}>
+                                        <DropdownToggle caret>
+                                            {this.state.timeValue}
+                                        </DropdownToggle>
+                                        <DropdownMenu>
+
+                                            <DropdownItem><div onClick={this.selectTimeValue} id="9.30AM TO 10.30AM">9.30AM TO 10.30AM</div></DropdownItem>
+                                            <DropdownItem><div onClick={this.selectTimeValue} id="3.30PM TO 4.30PM">3.30PM TO 4.30PM</div></DropdownItem>
+                                            <DropdownItem><div onClick={this.selectTimeValue} id="7.00PM TO 9.00PM">7.00PM TO 9.00PM</div></DropdownItem>
+                                            
+
+                                        </DropdownMenu>
+                                    </Dropdown>
 
                                     <div>
                                         <center>
@@ -296,7 +388,7 @@ class Hero extends Component {
                                             <Button
                                                 className="my-4"
                                                 type="submit"
-                                                disabled={( this.state.name.length >= 1 && this.state.regNo.length >= 1 && this.state.mobileNo.length >= 1 && this.state.email.length >= 1) ? false : true}
+                                                disabled={(this.state.name.length >= 1 && this.state.regNo.length >= 1 && this.state.mobileNo.length >= 1 && this.state.email.length >= 1 && this.state.domain.length >= 1) ? false : true}
                                             >
                                                 {loading && (
                                                     <i
